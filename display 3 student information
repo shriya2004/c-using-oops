@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+class Student_Info
+{
+    int roll_number;
+    char student_name[50], grade[2];
+
+    public:
+        void read_data(int count)
+        {
+            cout<<"\n Enter student information\n"<<count+1;
+            cout<<"Name of the Student:";
+            cin>>student_name;
+            cout<<"Roll Number: ";
+            cin>>roll_number;
+            cout<<"Grade (O, A+, A, B+, B, C, D, F): ";
+            cin>>grade;
+        }
+        void display_data(int count)
+        {
+            cout<<"\n Student Information \n"<<count+1;
+            cout<<"\nName of the Student: "<<student_name;
+            cout<<"\nRoll Number: "<<roll_number;
+            cout<<"\nGrade Secured: "<<grade;
+        }
+};
+
+int main(){
+    Student_Info stud[3];
+    int i;
+    for(i=0; i<3; i++)
+        stud[i].read_data(i);
+       cout<<"The information of 3 students has been saved.";
+      for(i=0; i<3; i++)
+        stud[i].display_data(i);
+    return 0;
+}
+output
+
+Enter student information
+1Name of the Student:shriya
+Roll Number: 13
+Grade (O, A+, A, B+, B, C, D, F): O
+
+ Enter student information
+2Name of the Student:preethi
+Roll Number: 14
+Grade (O, A+, A, B+, B, C, D, F): A+
+
+ Enter student information
+3Name of the Student:sritha
+Roll Number: 30
+Grade (O, A+, A, B+, B, C, D, F): A
+The information of 3 students has been saved.
+ Student Information 
+1
+Name of the Student: shriya
+Roll Number: 13
+Grade Secured: O
+ Student Information 
+2
+Name of the Student: preethi
+Roll Number: 14
+Grade Secured: A+
+ Student Information 
+3
+Name of the Student: sritha
+Roll Number: 30
+Grade Secured: A
